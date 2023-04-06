@@ -1,18 +1,19 @@
-const form = document.querySelector('myForm');
+const form = document.querySelector('form');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     // récupérer les valeurs des champs du formulaire
-    const nom = document.getElementById('Name').value;
-    const email = document.getElementById('Email').value;
-    const telephone = document.getElementById('Telephone').value;
+    const nom = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const telephone = document.getElementById('telephone').value;
     // validation des champs
-    if (!nom || !email || !telephone || ) {
+    if (nom ==='' || email ==='' || telephone ==='') {
         alert('Veuillez remplir tous les champs du formulaire.');
         return;
-    } else {
+    }
+     else{
         alert('Merci pour votre demande. Nous vous contacterons sous peu !');
-        form.submit()
+        form.submit();
     }
 
     // envoyer les données du formulaire au serveur
@@ -22,9 +23,9 @@ form.addEventListener('submit', (event) => {
 
 
     // réinitialiser le formulaire
-
+    form.reset();
 });
-form.reset();
+
 
 
 
